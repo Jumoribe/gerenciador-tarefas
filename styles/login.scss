@@ -104,6 +104,13 @@
                     width: 343px;
                 }
             }
+            .register{
+                color: $primaryColor;
+                font-size: 12px;
+                span{
+                    text-decoration: underline;
+                }
+            }
         }
     }
 }
