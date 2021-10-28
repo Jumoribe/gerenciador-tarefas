@@ -28,6 +28,13 @@
             margin-top: 3px;
         }
 
+        .icon {
+            color: $primaryColor;
+            font-size: 16px;
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+
         input {
             width: 224px;
             font-size: 14px;
@@ -68,6 +75,17 @@
         margin-top: 30px;
     }
 
+    .register{
+        text-align: center;
+        color: $primaryColor;
+        font-size: 14px;
+        margin-top: 8px;
+        span{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+
     .loading {
         background-color: $mediumGreyColor;
     }
@@ -102,13 +120,6 @@
 
                 input {
                     width: 343px;
-                }
-            }
-            .register{
-                color: $primaryColor;
-                font-size: 12px;
-                span{
-                    text-decoration: underline;
                 }
             }
         }

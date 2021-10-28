@@ -4,11 +4,11 @@ import { useState } from "react";
 /* eslint-disable @next/next/no-img-element */
 
 type FilterProps = {
-    finishPrevisionDateStart : string, 
+    finishPrevisionDateStart : string,
     setFinishPrevisionDateStart(e : string) : void,
-    finishPrevisionDateEnd : string, 
+    finishPrevisionDateEnd : string,
     setFinishPrevisionDateEnd(e : string) : void,
-    status : string, 
+    status : string,
     setStatus(e : string) : void
 }
 
@@ -48,7 +48,7 @@ const Filter: NextPage<FilterProps> = ({
                     </div>
                 </div>
             </div>
-            {showFilters && 
+            {showFilters &&
                 <div className="filtrosMobile">
                     <div>
                         <label>Período de:</label>

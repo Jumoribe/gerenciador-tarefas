@@ -1,18 +1,19 @@
 import { useState } from "react";
-import axios from 'axios';
 import { executeRequest } from "../services/api";
 import { NextPage } from "next";
 import { AccessTokenProps } from "../types/AccessTokenProps";
 
 /* eslint-disable @next/next/no-img-element */
-export const Login: NextPage<AccessTokenProps> = ({
-    setToken
+export const Login: NextPage<any> = ({
+    setToken,
+    setRegistered
 }) => {
 
     const [login, setLogin] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const [isLoading, setLoading] = useState(false);
+
 
     const doLogin = async () => {
         try {
@@ -51,8 +52,6 @@ export const Login: NextPage<AccessTokenProps> = ({
     }
 
     return (
-        <div className="container-login">
-            <img src="/logo.svg" alt="Logo Fiap" className="logo" />
             <form>
                 <p className="error">{error}</p>
                 <div className="input">
@@ -69,7 +68,8 @@ export const Login: NextPage<AccessTokenProps> = ({
                     className={isLoading ? 'loading' : ''}>
                     {isLoading ? '...Carregando' : 'Login'}
                 </button>
+                <div className="register">Ainda não possui uma conta? <span onClick={() => setRegistered(false)}>Click aqui.</span></div>
             </form>
-        </div>
     )
 }
+
